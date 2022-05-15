@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class CongratScript : MonoBehaviour
 {
-    public TextMeshProUGUI Text;
+    public TextMesh Text;
     public ParticleSystem SparksParticles;
 
-    private List<string> TextToDisplay;
+    private List<string> TextToDisplay = new List<string>();
 
     private float RotatingSpeed;
     private float TimeToNextText;
@@ -18,6 +17,7 @@ public class CongratScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Text = GetComponent<TextMesh>();
         TimeToNextText = 0.0f;
         CurrentText = 0;
 
@@ -27,7 +27,6 @@ public class CongratScript : MonoBehaviour
         TextToDisplay.Add("All Errors Fixed");
 
         Text.text = TextToDisplay[0];
-
         SparksParticles.Play();
     }
 
@@ -44,10 +43,8 @@ public class CongratScript : MonoBehaviour
             if (CurrentText >= TextToDisplay.Count)
             {
                 CurrentText = 0;
-
-
-                Text.text = TextToDisplay[CurrentText];
             }
+            Text.text = TextToDisplay[CurrentText];
         }
     }
 }
