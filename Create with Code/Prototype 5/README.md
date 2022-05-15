@@ -1,0 +1,59 @@
+[Unit 5 - User Interface](https://learn.unity.com/project/unit-5-user-interface)  
+- New Functionality
+  - Random objects are tossed into the air on intervals
+  - Objects are given random speed, position, and torque
+  - If you click on an object, it is destroyed
+  - There is a UI element for score on the screen
+  - The player’s score is tracked and displayed by the score text when hit a target
+  - There are particle explosions when the player gets an object
+  - A functional Game Over screen with a Restart button
+  - When the Restart button is clicked, the game resets
+  - Title screen that lets the user start the game
+  - Difficulty selection that affects spawn rate
+- New Concepts & Skills
+  - 2D View
+  - AddTorque
+  - Game Manager
+  - Lists
+  - While Loops
+  - Mouse Events
+  - TextMeshPro
+  - Canvas
+  - Anchor Points
+  - Import Libraries
+  - Custom methods with parameters
+  - Calling methods from other scripts
+  - Game states
+  - Buttons
+  - On Click events
+  - Scene management Library
+  - UI Library
+  - Booleans to control game states
+  - AddListener()
+  - Passing parameters between scripts
+  - Divide/Assign (/=) operator
+  - Grouping child objects
+
+[Challenge 5 - Whack-a-Food](https://learn.unity.com/tutorial/challenge-5-whack-a-food-with-wacky-ui)  
+- Center the text on the buttons horizontally and vertically
+  - Hint - If you expand one of the button objects in the hierarchy, you’ll see a “Text” object inside - you have to edit the properties of that “Text” object
+- The food should only be destroyed when the player clicks on it, not when the mouse touches it
+  - Hint - OnMouseEnter() detects when the mouse enters an object’s collider - OnMouseDown() detects when the mouse clicks on an object’s collider
+- It should always say, “Score: __“ with the value displayed after “Score:”
+  - Hint - When you set the score text, you have to add (concatenate) the word “Score: “ and the actual score value
+- Make the Restart button appear on the game over screen
+  - Hint - In the GameOver() method, make sure the restart button is being reactivated
+- The spawnRate is always way too fast. When you click Easy, the spawnRate should be slower - if you click Hard, the spawnRate should be faster.
+  - Hint - There is no information (or parameter) being passed from the buttons’ script to the Game Manager’s script - you need to implement a difficulty parameter
+- Bonus - Add a “Time: __” display that counts down from 60 in whole numbers (i.e. 59, 58, 57, etc) and triggers the game over sequence when it reaches 0.
+  - Hint - Google, “Unity Count down timer C#”. It will involve subtracting “Time.deltaTime” and using the Mathf.Round() method to display only whole numbers.
+
+[Bonus Features 5 - Share your Work](https://learn.unity.com/tutorial/bonus-features-5-share-your-work)  
+- Easy: Lives UI
+  - Try using a Text GameObject like we did for the score
+- Medium: Music volume
+  - Try using the event on the Slider element
+- Hard: Pause menu
+  - Try using Time.timeScale
+- Expert: Click-and-swipe
+  - Camera.ScreenToWorldPoint will help convert a screen space position to world position

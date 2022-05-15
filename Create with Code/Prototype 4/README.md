@@ -1,0 +1,57 @@
+[Unit 4 - Gameplay Mechanics](https://learn.unity.com/project/unit-4-gameplay-mechanics)  
+- New Functionality
+  - Camera rotates around the island based on horizontal input
+  - Player rolls in direction of camera based on vertical input
+  - Enemy spawns at random location on the island
+  - Enemy follows the player around
+  - Spheres bounce off of each other
+  - When the player collects a powerup, a visual indicator appears
+  - When the player collides with an enemy while they have the powerup, the enemy goes flying
+  - After a certain amount of time, the powerup ability and indicator disappear
+  - Enemies spawn in waves
+  - The number of enemies spawned increases after every wave is defeated
+  - A new power up spawns with every wave
+- New Concepts & Skills
+  - Texture Wraps
+  - Camera as child object
+  - Global vs Local coordinates
+  - Get direction of other object
+  - Physics Materials
+  - Defining vectors in 3D space
+  - Normalizing values
+  - Methods with return values
+  - Debug concatenation
+  - Local component variables
+  - IEnumerators and WaitForSeconds()
+  - Coroutines
+  - SetActive(true/false)
+  - For-loops
+  - Increment (++) operator
+  - Custom methods with parameters
+  - FindObjectsOfType
+
+[Challenge 4 - Soccer Scripting](https://learn.unity.com/tutorial/challenge-4-soccer-scripting)  
+- When you hit an enemy, it should send it away from the player
+  - Hint - In PlayerControllerX.cs, to get a Vector away from the player, you should subtract the [enemy position] minus the [player’s position] - not the reverse
+- A new wave should spawn when all enemy balls have been removed
+  - Hint - In SpawnManagerX.cs, check that the enemyCount variable is being set correctly
+- The powerup should only last for a certain duration, then disappear
+  - Hint - In PlayerControllerX.cs, the PowerupCoolDown Coroutine code looks good, but this coroutine is never actually called with the StartCoroutine() method
+- One enemy should be spawned in wave 1, two in wave 2, three in wave 3, etc
+  - Hint - In SpawnManagerX.cs, the for-loop that spawns enemy should make use of the enemiesToSpawn parameter
+- The enemy balls should go towards the “Player Goal” object
+  - Hint - There is an error in EnemyX.cs: “NullReferenceException: Object reference not set to an instance of an object”. It looks like the playerGoal object is never assigned.
+- Bonus - The player should get a speed boost whenever the player presses spacebar - and a particle effect should appear when they use it
+  - Hint - In PlayerController, add a simple if-statement that adds an “impulse” force if spacebar is pressed. To add a particle effect, first attach it as a child object of the Focal Point.
+- Bonus - The enemies’ speed should increase in speed by a small amount with every new wave
+  - Hint - You’ll need to track and increase the enemy speed in SpawnManagerX.cs. Then in EnemyX.cs, reference that speed variable and set it in Start().
+
+[Bonus Features 4 - Share your Work](https://learn.unity.com/tutorial/bonus-features-4-share-your-work)  
+- Easy: Harder enemy
+  - Try using an array for the enemy prefabs.
+- Medium: Homing rockets
+  - Try using an enum to differentiate the power ups
+- Hard: Smashingly good
+  - Extend the enum you created in the previous challenge
+- Expert: Boss battle
+  - Create a new SpawnBossWave function that only runs if the wave number is a multiple of a particular value. 

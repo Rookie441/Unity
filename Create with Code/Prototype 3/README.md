@@ -1,0 +1,68 @@
+[Unit 3 - Sound and Effects](https://learn.unity.com/project/unit-3-sound-and-effects)  
+- New Functionality
+  - Player jumps on spacebar press
+  - Player cannot double-jump
+  - Obstacles and Background move left
+  - Obstacles spawn on intervals
+  - Background repeats seamlessly
+  - Background stops when player collides with obstacle
+  - Obstacle spawning stops when player collides with obstacle
+  - Obstacles are destroyed off-screen
+  - The player starts the scene with a fast-paced running animation
+  - When the player jumps, there is a jumping animation
+  - When the player crashes, the player falls over
+  - Music plays during the game
+  - Particle effects at the player’s feet when they run
+  - Sound effects and explosion when the player hits an obstacle
+- New Concepts & Skills
+  - GetComponent
+  - ForceMode.Impulse
+  - Physics.Gravity
+  - Rigidbody constraints
+  - Rigidbody variables
+  - Booleans
+  - Multiply/Assign (“*) Operator
+  - And (&&) Operator
+  - OnCollisionEnter()
+  - Repeat background
+  - Get Collider width
+  - Script communication
+  - Equal to (==) operator
+  - Tags
+  - CompareTag()
+  - Animation Controllers
+  - Animation States, Layers, and Transitions
+  - Animation parameters
+  - Animation programming
+  - SetTrigger(), SetBool(), SetInt()
+  - Not (!) operator
+  - Particle systems
+  - Child object positioning
+  - Audio clips and Audio sources
+  - Play and stop sound effects
+
+[Challenge 3 - Balloons, Bombs, & Booleans](https://learn.unity.com/tutorial/challenge-3-bouncy-balloons-bombs-and-booleans  
+- The balloon should float up as the player presses spacebar
+  - Hint - There is a “NullReferenceExcepton” error on the player’s rigidBody variable - it has to be assigned in Start() using the GetComponent<> method
+- The background should move at start, then stop when the game is over
+  - Hint - In MoveLeftX.cs, the objects should only Translate to the left if the game is NOT over
+- Make bombs or money objects spawn every few seconds
+  - Hint - There is an error message saying, “Trying to Invoke method: SpawnManagerX.PrawnsObject couldn't be called” - spelling matters
+- Make the fireworks display at the balloon’s position
+  - Hint - The fireworks particle is a child object of the Player - but its location still has to be set at the same location
+- Make the background repeat seamlessly
+  - Hint - The repeatWidth variable should be half of the background’s width, not half of its height
+- Bonus - Prevent the player from floating their balloon too high
+  - Hint - Add a boolean to check if the balloon isLowEnough, then only allow the player to add upwards force if that boolean is true
+- Bonus - Make the balloon appear to bounce off of the ground, preventing it from leaving the bottom of the screen. There should be a sound effect when this happens, too!
+  - Hint - Figure out a way to test if the balloon collides with the ground object, then add an impulse force upward if it does
+
+[Bonus Features 3 - Share your Work](https://learn.unity.com/tutorial/bonus-features-3-share-your-work)  
+- Easy: Randomize obstacles
+  - Convert the prefab holder inside the SpawnManager to an array.
+- Medium: Double jump
+  - Try using a boolean to limit the player to double-jumping once
+- Hard: Dash ability and score
+  - Try using a boolean to determine whether the player is running fast
+- Expert: Game start animation
+  - Try lerping the players position.

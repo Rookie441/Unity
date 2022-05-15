@@ -1,0 +1,60 @@
+[Unit 1 - Player Control](https://learn.unity.com/project/unit-1-driving-simulation)  
+- New Functionality
+  - Project set up with assets imported
+  - Vehicle positioned at the start of the road
+  - Obstacle positioned in front of the vehicle
+  - Camera positioned behind vehicle
+  - Vehicle moves down the road at a constant speed
+  - When the vehicle collides with obstacles, they fly into the air
+  - Camera follows the vehicle down the road at a set offset distance
+  - When the player presses the up/down arrows, the vehicle will move forward and backward
+  - When the player presses the left/right arrows, the vehicle turns
+- New Concepts & Skills
+  - Create a new project
+  - Import assets
+  - Add objects to the scene
+  - Game vs Scene view
+  - Project, Hierarchy, Inspector windows
+  - Navigate 3D space
+  - Move and Rotate tools
+  - Customize the layout
+  - C# Scripts
+  - Start vs Update
+  - Comments
+  - Methods
+  - Pass parameters
+  - Time.deltaTime
+  - Multiply (*) operator
+  - Components
+  - Collider and RigidBody
+  - Variables
+  - Data types
+  - Access Modifiers
+  - Declare and initialize variables
+  - Empty objects
+  - Get user input
+  - Translate vs Rotate
+
+[Challenge 1 - Plane Programming](https://learn.unity.com/tutorial/challenge-1-steer-a-plane-through-obstacles-in-the-sky)  
+- Make the plane go forward
+  - Hint: Vector3.back makes an object move backwards, Vector3.forward makes it go forwards
+- Slow the plane down to a manageable speed
+  - Hint: If you multiply a value by Time.deltaTime, it will change it from 1x/frame to 1x/second
+- Make the plane tilt only if the user presses the up/down arrows
+  - Hint: In PlaneController.cs, in Update(), the verticalInput value is assigned, but it’s never actually used in the Rotate() call
+- Reposition it so it’s beside the plane
+  - Hint: For the camera’s position, try X=30, Y=0, Z=10 and for the camera’s rotation, try X=0, Y=-90, Z=0
+- Make the camera follow the plane
+  - Hint: In FollowPlane.cs, neither the plane nor offset variables are assigned a value - assign the plane variable in the camera’s inspector and assign the offset = new Vector3(30, 0, 10) in the code
+- Bonus - Make the propeller spin
+  - Hint: There is a “Propeller” child object of the plane - you should create a new “SpinPropellerX.cs” script and make it rotate every frame around the Z axis.  
+
+[Bonus Features 1 - Share your Work](https://learn.unity.com/tutorial/bonus-features-1-share-your-work)  
+- Easy: Obstacle pyramids
+  - Remember to use a Rigidbody!
+- Medium: Oncoming vehicles
+  - Try using transform.Translate to move the other vehicles.
+- Hard: Camera switcher
+  - Add a second camera and then use a key press to enable and disable it.
+- Expert: Local multiplayer
+  - You will need to edit the Input Manager and the Camera’s Viewport Rect Width property.
