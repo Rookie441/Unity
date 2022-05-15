@@ -37,22 +37,23 @@
   - Hard: Game user interface  
 
 
-  [Unit 3 - Endless Runner](https://github.com/Rookie441/Unity/tree/main/Create%20with%20Code/Prototype%203)  
-  - Functionality
-    - Player jumps on spacebar press
-    - Player cannot double-jump
-    - Obstacles and Background move left
-    - Obstacles spawn on intervals
-    - Background repeats seamlessly
-    - Background stops when player collides with obstacle
-    - Obstacle spawning stops when player collides with obstacle
-    - Obstacles are destroyed off-screen
-    - The player starts the scene with a fast-paced running animation
-    - When the player jumps, there is a jumping animation
-    - When the player crashes, the player falls over
-    - Music plays during the game
-    - Particle effects at the player’s feet when they run
-    - Sound effects and explosion when the player hits an obstacle  
+[Unit 3 - Endless Runner](https://github.com/Rookie441/Unity/tree/main/Create%20with%20Code/Prototype%203)  
+- Functionality
+  - Player jumps on spacebar press
+  - Player cannot double-jump
+  - Obstacles and Background move left
+  - Obstacles spawn on intervals
+  - Background repeats seamlessly
+  - Background stops when player collides with obstacle
+  - Obstacle spawning stops when player collides with obstacle
+  - Obstacles are destroyed off-screen
+  - The player starts the scene with a fast-paced running animation
+  - When the player jumps, there is a jumping animation
+  - When the player crashes, the player falls over
+  - Music plays during the game
+  - Particle effects at the player’s feet when they run
+  - Sound effects and explosion when the player hits an obstacle  
+
 
 - Bonus Features
   - Easy: Randomize obstacles
